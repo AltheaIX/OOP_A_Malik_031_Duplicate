@@ -1,4 +1,4 @@
-import java.time.Year;
+import java.time.LocalDate;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -31,7 +31,7 @@ public class Main {
             return;
         }
         yearOfBirth = scanner.nextInt();
-        int age = Year.now().getValue() - yearOfBirth;
+        int age = LocalDate.now().getYear() - yearOfBirth;
 
         System.out.println("\nPersonal Data:");
         System.out.println("Name: " + name);
