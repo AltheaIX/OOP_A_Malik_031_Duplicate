@@ -4,6 +4,9 @@ import java.util.Scanner;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+    public static final char Male = 'M';
+    public static final char Female = 'F';
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter name:");
@@ -13,10 +16,10 @@ public class Main {
         char genderInput = Character.toLowerCase(scanner.next().charAt(0));
         String gender = "";
         switch (genderInput) {
-            case 'm':
+            case Male:
                 gender = "Male";
                 break;
-            case 'f':
+            case Female:
                 gender = "Female";
                 break;
             default:
