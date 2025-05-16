@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static final int ADMIN = 1;
     public static final int STUDENT = 2;
@@ -14,27 +16,27 @@ public class Main {
         scanner.nextLine();
         switch (choice) {
             case ADMIN:
-                    System.out.print("Enter Admin Username: ");
-                    String username = scanner.nextLine();
-                    System.out.print("Enter Admin Password: ");
-                    String password = scanner.nextLine();
+                System.out.print("Enter Admin Username: ");
+                String username = scanner.nextLine();
+                System.out.print("Enter Admin Password: ");
+                String password = scanner.nextLine();
 
-                    Admin admin = new Admin(username, password);
-                    if(!admin.Login()){
-                        System.out.println("Login failed! Wrong username or password.");
-                        return;
-                    }
+                Admin admin = new Admin(username, password, "Admin", "Admin031");
+                if(!admin.login()){
+                    System.out.println("Login failed! Wrong username or password.");
+                    return;
+                }
 
-                    System.out.println("Admin login successfull!");
-                    break;
+                System.out.println("Admin login successfull!");
+                return;
             case STUDENT:
                 System.out.print("Enter Name: ");
-                String name = scanner.nextLine();
+                String nameStudent = scanner.nextLine();
                 System.out.print("Enter Student ID: ");
-                String nim = scanner.nextLine();
+                String nimStudent = scanner.nextLine();
 
-                Students student = new Students(name, nim);
-                if(!student.Login()){
+                Student student = new Student(nameStudent, nimStudent);
+                if(!student.login()){
                     System.out.println("Login failed! Wrong username or password.");
                     return;
                 }
